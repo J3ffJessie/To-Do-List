@@ -1,6 +1,6 @@
 html {
   background-color: slategray;
-  background-image: -webkit-linear-gradient(65deg, rgb(0, 111, 145) 50%, rgb(94, 189, 226) 50%);
+  background-image: -webkit-linear-gradient(65deg, rgb(112, 157, 175) 30%, rgb(47, 78, 81) 45%, rgb(0, 111, 145) 45%);
   min-height: 1000px;
   font-family: 'helvetica neue';
 }
@@ -13,13 +13,13 @@ h1 {
 .box {
   max-width: 400px;
   margin: 50px auto;
-  background: rgb(94, 189, 226);
+  background: rgb(115, 159, 177);
   border-radius: 5px;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.7);
 }
 
 #heading {
-  background-color: rgb(94,189,226);
+  background-color: rgb(115, 159, 177);
   text-align: center;
 }
 
@@ -61,7 +61,7 @@ button {
   width: 50px;
   border-radius: 50%;
   border-color: transparent;
-  background-color:rgb(30, 6, 238);
+  background-color: rgb(30, 6, 238);
   color: #fff;
   font-size: 30px;
   padding-bottom: 6px;
