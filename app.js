@@ -21,7 +21,8 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost:27017/todolistDB", {
+//MongoDB hosted locally for testing purposes.
+mongoose.connect("mongodb+srv://admin-Jeff:breanna1@todolistapp-igj0k.mongodb.net/todolistDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -54,7 +55,7 @@ const defaultItems = [item1, item2, item3];
 app.get("/", function (req, res) {
   //parsing through the Item model and finding the post items
   Item.find({}, function (err, foundItems) {
-//determining if the list has no items and if so, displaying the default list items...may delete later
+    //determining if the list has no items and if so, displaying the default list items...may delete later
     if (foundItems.length === 0) {
       Item.insertMany(defaultItems, function (err) {
         if (err) {
@@ -71,7 +72,7 @@ app.get("/", function (req, res) {
       });
     }
   });
-//posting newly created items to the list and refreshing the home route automatically to show new list with new item
+  //posting newly created items to the list and refreshing the home route automatically to show new list with new item
   app.post("/", function (req, res) {
 
     const itemName = req.body.newItem;
@@ -84,28 +85,30 @@ app.get("/", function (req, res) {
 
     res.redirect("/");
   });
-//deleting marked items completed and redirecting to the home route to show that the item has been removed from the list
+  //deleting marked items completed and redirecting to the home route to show that the item has been removed from the list
   app.post("/delete", function (req, res) {
-    const checkedItemId= req.body.checkbox;
+    const checkedItemId = req.body.checkbox;
 
-    Item.findByIdAndDelete(checkedItemId, function(err){
-      if(err){
+    Item.findByIdAndDelete(checkedItemId, function (err) {
+      if (err) {
         console.log(err);
       } else {
         res.redirect("/");
       }
     });
-    });
-  
+  });
 
 
 
 
+  //route for the about page of the application
   app.get("/about", function (req, res) {
     res.render("about");
   });
 
 });
+
+//local host running on your machine for testing
 app.listen(5500, function () {
   console.log("Server has started on Port 5500");
 });

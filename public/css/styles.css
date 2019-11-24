@@ -1,9 +1,10 @@
 html {
   background-color: slategray;
-  background-image: -webkit-linear-gradient(65deg, rgb(112, 157, 175) 30%, rgb(47, 78, 81) 45%, rgb(0, 111, 145) 45%);
-  min-height: 1000px;
+  background-image: -webkit-linear-gradient(-65deg, rgb(60, 146, 180) 25%, rgb(47, 78, 81) 55%, rgb(0, 111, 145) 75%);
+  min-height: 100vh;
   font-family: 'helvetica neue';
 }
+
 
 h1 {
   color: black;
