@@ -108,7 +108,15 @@ app.get("/", function (req, res) {
 
 });
 
-//local host running on your machine for testing
-app.listen(5500, function () {
-  console.log("Server has started on Port 5500");
+let port = process.env.PORT;
+if(port == null || port == ""){
+  port=5500;
+}
+app.listen(port, function(){
+  console.log("Server has started successfully");
 });
+
+//local host running on your machine for testing
+// app.listen(5500, function () {
+//   console.log("Server has started on Port 5500");
+// });
