@@ -34,7 +34,7 @@ const itemsSchema = {
 //building the mongoose model for future list items
 const Item = mongoose.model("Item", itemsSchema);
 
-
+// list of default items meant ot be a tutorial for the list app
 const item1 = new Item({
   name: "Welcome to your To-Do List"
 });
@@ -50,12 +50,11 @@ const item3 = new Item({
 //array to load on initial start up if the list is completely empty upon loading
 const defaultItems = [item1, item2, item3];
 
-
-
+//The Home route for the app
 app.get("/", function (req, res) {
   //parsing through the Item model and finding the post items
   Item.find({}, function (err, foundItems) {
-
+//determining if the list has no items and if so, displaying the default list items...may delete later
     if (foundItems.length === 0) {
       Item.insertMany(defaultItems, function (err) {
         if (err) {
@@ -72,28 +71,35 @@ app.get("/", function (req, res) {
       });
     }
   });
-
-
+//posting newly created items to the list and refreshing the home route automatically to show new list with new item
   app.post("/", function (req, res) {
 
-    const item = req.body.newItem;
+    const itemName = req.body.newItem;
 
-    if (req.body.list === "Work") {
-      workItems.push(item);
-      res.redirect("/work");
-    } else {
-      items.push(item);
-      res.redirect("/");
-    }
-  });
-
-
-  app.get("/work", function (req, res) {
-    res.render("list", {
-      listTitle: "Work List",
-      newListItems: workItems
+    const item = new Item({
+      name: itemName
     });
+
+    item.save();
+
+    res.redirect("/");
   });
+//deleting marked items completed and redirecting to the home route to show that the item has been removed from the list
+  app.post("/delete", function (req, res) {
+    const checkedItemId= req.body.checkbox;
+
+    Item.findByIdAndDelete(checkedItemId, function(err){
+      if(err){
+        console.log(err);
+      } else {
+        res.redirect("/");
+      }
+    });
+    });
+  
+
+
+
 
   app.get("/about", function (req, res) {
     res.render("about");
