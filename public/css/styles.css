@@ -120,11 +120,11 @@ footer {
   input[type="text"] {
     text-align: center;
     height: 60px;
-    top: 10px;
+    top: 10px !important;
     border: none;
     background: transparent;
     font-size: 20px;
     font-weight: 200;
-    width: 150px;
+    width: 150px !important;
   
 }
