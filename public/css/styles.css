@@ -98,3 +98,14 @@ footer {
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
 }
+
+@media only screen and (max-width: 375px) {
+  button {
+    border-radius: 50%;
+    border-color: transparent;
+    background: green;
+    color: #fff;
+    font-size: 30px;
+    border: 2px solid black !important;
+  }
+}
