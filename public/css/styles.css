@@ -1,6 +1,11 @@
+:root {
+  --main-background: radial-gradient(blue, red);
+  --main-backdrop: white;
+}
+
+
 html {
-  background-color: slategray;
-  background-image: -webkit-linear-gradient(-65deg, rgb(60, 146, 180) 25%, rgb(47, 78, 81) 55%, rgb(0, 111, 145) 75%);
+  background: var(--main-background);
   min-height: 100vh;
   font-family: 'helvetica neue';
 }
@@ -14,13 +19,12 @@ h1 {
 .box {
   max-width: 400px;
   margin: 50px auto;
-  background: rgb(115, 159, 177);
+  background: var(--main-backdrop);
   border-radius: 5px;
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.7);
 }
 
 #heading {
-  background-color: rgb(115, 159, 177);
+  background-color: var(--main-backdrop);
   text-align: center;
 }
 
@@ -28,7 +32,7 @@ h1 {
   min-height: 70px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #F1F1F1;
+  border-bottom: 1px solid grey !important;
 }
 
 .item:last-child {
@@ -49,7 +53,7 @@ p {
   padding: 20px;
   font-size: 20px;
   font-weight: 200;
-  color: #00204a;
+  color: black;
 }
 
 form.item {
@@ -62,11 +66,10 @@ button {
   width: 50px;
   border-radius: 50%;
   border-color: transparent;
-  background-color: rgb(30, 6, 238);
+  background: green;
   color: #fff;
   font-size: 30px;
-  padding-bottom: 6px;
-  border-width: 0;
+  border: 2px solid black !important;
 }
 
 input[type="text"] {
