@@ -22,8 +22,9 @@ h1 {
 .box {
   max-width: 100vw;
   margin: 50px auto;
-  background: var(--main-backdrop);
+  background: rgb(115, 159, 177);
   border-radius: 5px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.7);
 }
 
 #heading {
@@ -35,7 +36,7 @@ h1 {
   min-height: 70px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid grey !important;
+  border-bottom: 1px solid #F1F1F1;
 }
 
 .item:last-child {
@@ -57,7 +58,7 @@ p {
   padding: 20px;
   font-size: 20px;
   font-weight: 200;
-  color: black;
+  color: #00204a;
 }
 
 form {
@@ -75,7 +76,7 @@ form.item {
 button {
   border-radius: 50%;
   border-color: transparent;
-  background: green;
+  background-color: rgb(30, 6, 238);
   color: #fff;
   font-size: 30px;
   border: 2px solid black !important;

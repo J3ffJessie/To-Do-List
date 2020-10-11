@@ -3,11 +3,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-require('dotenv').config();
+
+
 
 const app = express();
 
-let database = process.env.Mongoose;
+
 
 //const items = [];
 //const workItems = [];
@@ -36,12 +37,19 @@ const Item = mongoose.model("Item", itemsSchema);
 
 // list of default items meant ot be a tutorial for the list app
 const item1 = new Item({
-  name: "Welcome to your To-Do List, add Items and check items off as you complete them."
+  name: "Welcome to your To-Do List"
 });
 
+const item2 = new Item({
+  name: "Hit the + button to add a new item"
+});
+
+const item3 = new Item({
+  name: "<---Hit this button to delete an item."
+});
 
 //array to load on initial start up if the list is completely empty upon loading
-const defaultItems = [item1];
+const defaultItems = [item1, item2, item3];
 
 //The Home route for the app
 app.get("/", function (req, res) {
@@ -102,7 +110,7 @@ app.get("/", function (req, res) {
 
 let port = process.env.PORT;
 if(port == null || port == ""){
-  port=8000;
+  port=5500;
 }
 app.listen(port, function(){
   console.log("Server has started successfully");
