@@ -8,7 +8,6 @@
 html {
   background: var(--main-background)no-repeat;
   min-height: 100vh;
-  min-width: 100vw;
   font-family: 'helvetica neue';
 }
 
@@ -16,15 +15,13 @@ html {
 h1 {
   color: black;
   padding: 10px;
-  max-width: 100vw;
 }
 
 .box {
-  max-width: 100vw;
+  max-width: 400px;
   margin: 50px auto;
-  background: rgb(115, 159, 177);
+  background: var(--main-backdrop);
   border-radius: 5px;
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.7);
 }
 
 #heading {
@@ -36,7 +33,7 @@ h1 {
   min-height: 70px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #F1F1F1;
+  border-bottom: 1px solid #033349 !important;
 }
 
 .item:last-child {
@@ -45,7 +42,7 @@ h1 {
 
 input:checked+p {
   text-decoration: line-through;
-  text-decoration-color: midnightblue;
+  text-decoration-color: #e6250a;
 }
 
 input[type="checkbox"] {
@@ -58,29 +55,28 @@ p {
   padding: 20px;
   font-size: 20px;
   font-weight: 200;
-  color: #00204a;
+  color: black;
 }
 
 form {
   background-color: var(--main-header-background);
-  max-width: 100vw;
+  max-width: 400px;
   min-width: 360px;
 }
 
 form.item {
   text-align: center;
-  margin-left: 20px;
+  margin-left: 10px;
 
 }
 
 button {
-  border-radius: 50%;
+  border-radius: 25%;
   border-color: transparent;
-  background-color: rgb(30, 6, 238);
-  color: #fff;
-  font-size: 30px;
-  border: 2px solid black !important;
-  margin-top: 5px;
+  color: #e6250a;
+  background-color:#033349;
+  font-size: 25px;
+  border: 1px solid black !important;
 
 }
 

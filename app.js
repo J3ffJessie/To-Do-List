@@ -110,7 +110,7 @@ app.get("/", function (req, res) {
 
 let port = process.env.PORT;
 if(port == null || port == ""){
-  port=5500;
+  port=8000;
 }
 app.listen(port, function(){
   console.log("Server has started successfully");
