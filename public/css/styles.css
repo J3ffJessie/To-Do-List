@@ -110,12 +110,13 @@ footer {
 
 @media only screen and (max-width: 425px) {
   button {
-    border-radius: 50%;
+    border-radius: 25%;
     border-color: transparent;
-    background: green;
-    color: #fff;
-    font-size: 30px;
+    color: #e6250a;
+    background-color:#033349;
+    font-size: 25px;
     border: 1px solid black !important;
+  
   }
   input[type="text"] {
     text-align: center;
