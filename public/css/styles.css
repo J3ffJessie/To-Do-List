@@ -108,7 +108,7 @@ footer {
   text-align: center;
 }
 
-@media only screen and (max-width: 400px min-width: 360px) {
+@media only screen and (max-width: 425px) {
   button {
     border-radius: 50%;
     border-color: transparent;
