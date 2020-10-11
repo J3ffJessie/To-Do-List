@@ -1,6 +1,7 @@
 :root {
-  --main-background: radial-gradient(blue, red);
+  --main-background: linear-gradient(to left, #033349, #8f532f);
   --main-backdrop: white;
+  --main-header-background: #fe8138;
 }
 
 
@@ -18,13 +19,14 @@ h1 {
 
 .box {
   max-width: 400px;
+  min-width: 360px;
   margin: 50px auto;
   background: var(--main-backdrop);
   border-radius: 5px;
 }
 
 #heading {
-  background-color: var(--main-backdrop);
+  background-color: var(--main-header-background);
   text-align: center;
 }
 
@@ -46,6 +48,7 @@ input:checked+p {
 
 input[type="checkbox"] {
   margin: 20px;
+
 }
 
 p {
@@ -56,9 +59,16 @@ p {
   color: black;
 }
 
+form {
+  background-color: var(--main-header-background);
+  max-width: 400px;
+  min-width: 360px;
+}
+
 form.item {
   text-align: center;
   margin-left: 20px;
+
 }
 
 button {
@@ -68,6 +78,7 @@ button {
   color: #fff;
   font-size: 30px;
   border: 2px solid black !important;
+
 }
 
 input[type="text"] {
@@ -79,15 +90,17 @@ input[type="text"] {
   font-size: 20px;
   font-weight: 200;
   width: 313px;
+
 }
 
 input[type="text"]:focus {
   outline: none;
-  box-shadow: inset 0 -3px 0 0 rgb(6, 9, 173);
+  box-shadow: inset 0 -3px #033349;
+
 }
 
 ::placeholder {
-  color: grey;
+  color: #e6250a;
   opacity: 1;
 }
 
@@ -97,7 +110,7 @@ footer {
   text-align: center;
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 300px) {
   button {
     border-radius: 50%;
     border-color: transparent;
