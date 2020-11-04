@@ -1,12 +1,11 @@
 :root {
-  --main-background: linear-gradient(to left, #033349, #8f532f);
+  --main-background: radial-gradient(blue, red);
   --main-backdrop: white;
-  --main-header-background: #fe8138;
 }
 
 
 html {
-  background: var(--main-background)no-repeat;
+  background: var(--main-background);
   min-height: 100vh;
   font-family: 'helvetica neue';
 }
@@ -25,7 +24,7 @@ h1 {
 }
 
 #heading {
-  background-color: var(--main-header-background);
+  background-color: var(--main-backdrop);
   text-align: center;
 }
 
@@ -33,7 +32,7 @@ h1 {
   min-height: 70px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #033349 !important;
+  border-bottom: 1px solid grey !important;
 }
 
 .item:last-child {
@@ -42,12 +41,11 @@ h1 {
 
 input:checked+p {
   text-decoration: line-through;
-  text-decoration-color: #e6250a;
+  text-decoration-color: midnightblue;
 }
 
 input[type="checkbox"] {
   margin: 20px;
-
 }
 
 p {
@@ -58,26 +56,20 @@ p {
   color: black;
 }
 
-form {
-  background-color: var(--main-header-background);
-  max-width: 400px;
-  min-width: 360px;
-}
-
 form.item {
   text-align: center;
-  margin-left: 10px;
-
+  margin-left: 20px;
 }
 
 button {
-  border-radius: 25%;
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
   border-color: transparent;
-  color: #e6250a;
-  background-color:#033349;
-  font-size: 25px;
-  border: 1px solid black !important;
-
+  background: green;
+  color: #fff;
+  font-size: 30px;
+  border: 2px solid black !important;
 }
 
 input[type="text"] {
@@ -88,44 +80,44 @@ input[type="text"] {
   background: transparent;
   font-size: 20px;
   font-weight: 200;
-  width: 300px;
-
+  width: 313px;
 }
 
 input[type="text"]:focus {
   outline: none;
-  box-shadow: inset 0 -3px #033349;
-
+  box-shadow: inset 0 -3px 0 0 rgb(6, 9, 173);
 }
 
 ::placeholder {
-  color: #e6250a;
+  color: grey;
   opacity: 1;
 }
 
 footer {
-  color: #fe8138;
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
   text-align: center;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (min-device-width: 360px) and (max-device-width: 465px) {
   button {
-    border-radius: 25%;
+    min-height: 30px;
+    width: 30px;
+    border-radius: 50%;
     border-color: transparent;
-    color: #e6250a;
-    background-color:#033349;
-    font-size: 25px;
+    background: green;
+    color: #fff;
+    font-size: 20px;
     border: 1px solid black !important;
-  
   }
+
   input[type="text"] {
     text-align: center;
     height: 60px;
-    top: 10px !important;
+    top: 10px;
     border: none;
     background: transparent;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 200;
-    width: 275px !important;
-  
+  }
 }
