@@ -8,6 +8,7 @@
 html {
   background: var(--main-background)no-repeat;
   min-height: 100vh;
+  min-width: 100vw;
   font-family: 'helvetica neue';
 }
 
@@ -107,13 +108,13 @@ footer {
   color: #fe8138;
   text-align: center;
 }
-@media only screen and (min-device-width: 360px) and (max-device-width: 465px) {
+@media only screen and (min-device-width: 355px) and (max-device-width: 480px) {
   button {
     min-height: 30px;
     width: 30px;
-    border-radius: 50%;
+    border-radius: 25%;
     border-color: transparent;
-    background: green;
+    background: #033349;
     color: #fff;
     font-size: 20px;
     border: 1px solid black !important;
@@ -127,5 +128,6 @@ footer {
     background: transparent;
     font-size: 15px;
     font-weight: 200;
+    width: 75vw;
   }
 }
