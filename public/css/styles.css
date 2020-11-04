@@ -98,3 +98,26 @@ footer {
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
 }
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 465px) {
+  button {
+    min-height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border-color: transparent;
+    background: green;
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid black !important;
+  }
+
+  input[type="text"] {
+    text-align: center;
+    height: 60px;
+    top: 10px;
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    font-weight: 200;
+  }
+}
