@@ -63,6 +63,8 @@ form {
   background-color: var(--main-header-background);
   max-width: 400px;
   min-width: 360px;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 form.item {
@@ -73,12 +75,10 @@ form.item {
 
 button {
   border-radius: 25%;
-  border-color: transparent;
-  color: #e6250a;
-  background-color:#033349;
+  background: green;
+  border: 2px solid gray !important;
   font-size: 25px;
-  border: 1px solid black !important;
-
+  margin-left: 25px;
 }
 
 input[type="text"] {
@@ -89,7 +89,7 @@ input[type="text"] {
   background: transparent;
   font-size: 20px;
   font-weight: 200;
-  width: 300px;
+  width: 18rem;
 
 }
 
@@ -108,16 +108,35 @@ footer {
   color: #fe8138;
   text-align: center;
 }
-@media only screen and (min-device-width: 355px) and (max-device-width: 480px) {
-  button {
-    min-height: 30px;
-    width: 30px;
+@media only screen and (min-device-width: 355px) and (max-device-width: 454px) {
+  
+button {
+  border-radius: 25%;
+  background: green;
+  border: 2px solid gray !important;
+  font-size: 25px;
+  margin-left: 20px;
+}
+  
+  input[type="text"] {
+    text-align: center;
+    height: 60px;
+    top: 10px;
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    font-weight: 200;
+    width: 18rem;
+  }
+}
+
+@media only screen and (min-device-width: 455px) and (max-device-width: 480px){
+  button{
     border-radius: 25%;
-    border-color: transparent;
-    background: #033349;
-    color: #fff;
-    font-size: 20px;
-    border: 1px solid black !important;
+    background: green;
+    border: 2px solid gray @important;
+    font-size: 25px;
+    margin-left: 20px;
   }
 
   input[type="text"] {
@@ -126,8 +145,8 @@ footer {
     top: 10px;
     border: none;
     background: transparent;
-    font-size: 15px;
+    font-size: 25px;
     font-weight: 200;
-    width: 75vw;
+    width: 18rem;
   }
 }
