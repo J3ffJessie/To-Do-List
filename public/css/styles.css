@@ -102,7 +102,7 @@
   button{
   border-radius: 25%;
   background: green;
-  border: 2px solid gray @important;
+  border: 2px solid gray !important;
   font-size: 25px;
   }
   input[type="text"] {
