@@ -79,7 +79,6 @@ button {
   border: 2px solid gray !important;
   font-size: 25px;
   margin-top: 15px;
-  margin-left: 15px;
   z-index: 1;
 }
 
@@ -114,7 +113,6 @@ footer {
     background: green;
     border: 2px solid gray !important;
     font-size: 25px;
-    margin-left: 15px !important;
   }
 
   input[type="text"] {
@@ -134,7 +132,6 @@ footer {
     background: green;
     border: 2px solid gray !important;
     font-size: 25px;
-    margin-left: 15px !important;
   }
 
   input[type="text"] {
