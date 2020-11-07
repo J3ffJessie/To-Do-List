@@ -74,9 +74,13 @@ form.item {
 button {
   border-radius: 25%;
   width: auto;
+  position: absolute;
   background: green;
   border: 2px solid gray !important;
   font-size: 25px;
+  margin-top: 15px;
+  margin-left: 25px;
+  z-index: 1;
 }
 
 input[type="text"] {
@@ -95,7 +99,7 @@ input[type="text"]:focus {
 }
 
 ::placeholder {
-  color: #e6250a;
+  color: white;
   opacity: 1;
 }
 
@@ -110,10 +114,12 @@ footer {
     background: green;
     border: 2px solid gray !important;
     font-size: 25px;
+    margin-left: 15px !important;
   }
 
   input[type="text"] {
     text-align: center;
+    width: 70vw;
     height: 60px;
     top: 10px;
     border: none;
@@ -129,10 +135,12 @@ footer {
     background: green;
     border: 2px solid gray !important;
     font-size: 25px;
+    margin-left: 15px !important;
   }
 
   input[type="text"] {
     text-align: center;
+    width: 70vw;
     height: 60px;
     top: 10px;
     border: none;
