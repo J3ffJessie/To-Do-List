@@ -79,7 +79,7 @@ button {
   border: 2px solid gray !important;
   font-size: 25px;
   margin-top: 15px;
-  margin-left: 25px;
+  margin-left: 15px;
   z-index: 1;
 }
 
@@ -119,7 +119,6 @@ footer {
 
   input[type="text"] {
     text-align: center;
-    width: 70vw;
     height: 60px;
     top: 10px;
     border: none;
@@ -140,7 +139,6 @@ footer {
 
   input[type="text"] {
     text-align: center;
-    width: 70vw;
     height: 60px;
     top: 10px;
     border: none;
