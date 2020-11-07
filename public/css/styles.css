@@ -33,7 +33,7 @@ h1 {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #033349 !important;
-  animation: slidein .5s linear 1s;
+  animation: slidein .5s linear;
 }
 
 @keyframes slidein {
